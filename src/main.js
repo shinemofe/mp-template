@@ -4,6 +4,12 @@ import router from './router'
 import store from './store'
 
 Vue.config.productionTip = false
+xm.sourceCheck && xm.sourceCheck({
+  // 卡片管理后台登录后，token 从 chrome -> application -> cookie 中查取
+  token: '',
+  ids: [],
+  isLocal: process.env.NODE_ENV === 'development'
+})
 
 new Vue({
   router,

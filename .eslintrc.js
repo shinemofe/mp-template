@@ -3,6 +3,9 @@ module.exports = {
   env: {
     node: true
   },
+  globals: {
+    xm: true
+  },
   extends: [
     'plugin:vue/essential',
     '@vue/standard'
