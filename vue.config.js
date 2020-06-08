@@ -2,8 +2,7 @@ const path = require('path')
 const isLocal = process.env.NODE_ENV === 'development'
 
 module.exports = {
-  configureWebpack: {
-  },
+  publicPath: './',
   chainWebpack (config) {
     config
       .plugin('html')
