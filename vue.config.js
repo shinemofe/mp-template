@@ -11,6 +11,6 @@ module.exports = {
       })
   },
   configureWebpack: {
-    externals: isLocal ? { vue: 'Vue' } : null
+    externals: isLocal ? { vue: 'Vue' } : {}
   }
 }
