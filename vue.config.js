@@ -7,7 +7,7 @@ module.exports = {
     config
       .plugin('html')
       .tap(args => {
-        return isLocal ? [{ template: path.resolve(__dirname, '../public/index-local.html') }] : args
+        return isLocal ? [{ template: path.resolve(__dirname, './public/index-local.html') }] : args
       })
   }
 }
