@@ -9,5 +9,8 @@ module.exports = {
       .tap(args => {
         return isLocal ? [{ template: path.resolve(__dirname, './public/index-local.html') }] : args
       })
+  },
+  configureWebpack: {
+    externals: isLocal ? { vue: 'Vue' } : null
   }
 }
