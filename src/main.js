@@ -14,7 +14,7 @@ if (local) {
   })
 }
 // 每次 page show 去做检查更新
-window.xm.on('onPageShow', () => {
+window.xm.on('onAppResume', () => {
   xm.sourceCheck({
     // 使用的卡片组件名称，从管理后台上可以查到
     componentNames: deps
