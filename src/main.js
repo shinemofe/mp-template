@@ -6,20 +6,15 @@ import deps from './card-deps.json'
 import 'tcon'
 
 Vue.config.productionTip = false
-const local = process.env.NODE_ENV === 'development'
-if (local) {
+const sourceCheck = () => {
   window.xm.sourceCheck({
     // 使用的卡片组件名称，从管理后台上可以查到
     componentNames: deps
   })
 }
-// 每次 page show 去做检查更新
-window.xm.on('onAppResume', () => {
-  xm.sourceCheck({
-    // 使用的卡片组件名称，从管理后台上可以查到
-    componentNames: deps
-  })
-})
+window.xm.on('onAppResume', sourceCheck)
+window.xm.on('onLoad', sourceCheck)
+(process.env.NODE_ENV === 'development') && sourceCheck()
 
 new Vue({
   router,
