@@ -14,7 +14,9 @@ const sourceCheck = () => {
 }
 window.xm.on('onAppResume', sourceCheck)
 window.xm.on('onLoad', sourceCheck)
-(process.env.NODE_ENV === 'development') && sourceCheck()
+if (process.env.NODE_ENV === 'development') {
+  sourceCheck()
+}
 
 new Vue({
   router,
