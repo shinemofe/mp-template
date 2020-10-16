@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <p>Hello World!</p>
-    <p>讯盟小程序开发</p>
+    <p>小程序开发</p>
 
     <xmcard-render
       v-for="name in deps"
