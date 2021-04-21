@@ -10,6 +10,7 @@ module.exports = {
   //       return isLocal ? [{ template: path.resolve(__dirname, './public/index-local.html') }] : args
   //     })
   // },
+  productionSourceMap: false,
   configureWebpack: {
     externals: { vue: 'Vue' }
   },
